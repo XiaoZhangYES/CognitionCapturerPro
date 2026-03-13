@@ -11,11 +11,6 @@
 <p align="center">
   <a href="https://arxiv.org/abs/2412.10489">
     <img src="https://img.shields.io/badge/Paper-arXiv%20(TODO)-B31B1B.svg" alt="Paper arXiv TODO" />
-  </a>
-  <a href="./Cogpro.pdf">
-    <img src="https://img.shields.io/badge/Manuscript-PDF-2d7ff9.svg" alt="Manuscript PDF" />
-  </a>
-  <img src="https://img.shields.io/badge/Status-IEEE%20TIP%20under%20review-blue.svg" alt="TIP under review" />
 </p>
 
 > TODO: replace the temporary arXiv badge target and update the manuscript metadata after the paper is publicly available.
