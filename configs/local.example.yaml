@@ -1,0 +1,8 @@
+paths:
+  data_root: /path/to/dataset_root
+  weights_root: /path/to/model_weights
+  runs_root: runs
+  diffusion_embeddings_root: /optional/path/to/diffusion_embeddings
+  sdxl_root: /optional/path/to/sdxl-turbo
+  ip_adapter_root: /optional/path/to/ip_adapter
+  things_meg_image_description_root: /optional/path/to/meg_blip2_texts

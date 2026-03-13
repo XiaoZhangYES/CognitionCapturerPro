@@ -1,0 +1,4 @@
+paths:
+  data_root: /data/zkf/dataset_eeg
+  weights_root: /data/zkf/ModelWeights
+  runs_root: runs
