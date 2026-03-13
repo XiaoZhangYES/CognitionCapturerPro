@@ -30,11 +30,11 @@
 
 ## Overview
 
-Brain decoding aims to recover perceptual content from neural signals, but high-fidelity visual decoding remains difficult because neural representations are affected by both **fidelity loss** and **representational shift**. CognitionCapturerPro (CogCapPro) addresses these issues by jointly modeling EEG/MEG signals with images, text, depth maps, and edge maps, then aligning the learned representations to a reconstruction space for image synthesis.
+Brain decoding aims to recover perceptual content from neural signals, but high-fidelity visual decoding remains difficult because neural representations are affected by both **fidelity loss** and **representational shift**. Our CognitionCapturerPro (CogCapPro) addresses these issues by jointly modeling EEG/MEG signals with images, text, depth maps, and edge maps, then aligning the learned representations to a reconstruction space for image synthesis.
 
 Compared with the previous CognitionCapturer framework, CogCapPro introduces three main components: an uncertainty-weighted masking strategy for modeling fidelity loss, a fusion encoder for integrating modality-private and shared information, and a simplified asymmetric alignment module for efficient reconstruction. On the THINGS-EEG dataset, the paper reports a **25.9%** and **10.6%** improvement in Top-1 and Top-5 retrieval accuracy over CognitionCapturer, respectively.
 
-This repository contains the refactored open-source runtime for training, alignment, and image generation. The current public code path is centered on:
+This repository includes code for training, alignment, and image generation. The main entry points are:
 
 - `main.py` for EEG/MEG training
 - `python -m src.cogcappro.align.main` for feature alignment
@@ -42,17 +42,17 @@ This repository contains the refactored open-source runtime for training, alignm
 
 ## Environment Setup
 
-The public runtime has been validated on Linux with Python 3.9 and CUDA-enabled GPUs.
+The codebase has been validated on Linux with Python 3.9. GPU acceleration is strongly recommended for training, alignment, and image generation.
 
-1. Install a PyTorch build compatible with your CUDA environment.
-2. Install the project in editable mode:
+1. Create and activate a Python 3.9 environment.
+2. Install the dependencies:
 
 ```bash
 cd /path/to/CogCapPro
-pip install -e .
+pip install -r requirements.txt
 ```
 
-If you prefer to run directly from source, the same entrypoints also work from the repository root without an editable install.
+The commands documented below can be run directly from the repository root.
 
 ## Dataset and Pretrained Models
 
@@ -65,7 +65,9 @@ Suggested public sources:
 - IP-Adapter: `https://huggingface.co/h94/IP-Adapter`
 - OpenCLIP: `https://github.com/mlfoundations/open_clip`
 
-The refactored runtime already ships repository-local auxiliary assets under `weights/` for the current pipeline, while external datasets and large pretrained model folders should be supplied by the user.
+The `weights/` folder is not distributed through GitHub because it is too large. Please download it from Google Drive and place it under your local `weights_root`:
+
+- `https://drive.google.com/drive/folders/1FS5Rv_q7LaNkTWogkZk-nfQTNjxuIKPZ?usp=sharing`
 
 Expected external directory layout:
 
@@ -215,15 +217,15 @@ find ${SUBJECT_RUN}/generated_image/all -type f | wc -l
 
 ## Citation
 
-If you find this repository useful, please consider citing the project. The BibTeX below is a placeholder and should be updated once the public arXiv or final TIP metadata is available.
+If you find this repository useful, please consider citing our paper. Thanks😊!
 
 ```bibtex
-@article{ji2026cognitioncapturerpro,
+@article{zhang2026cognitioncapturerpro,
   title   = {CognitionCapturerPro: Towards High-Fidelity Visual Decoding from EEG/MEG via Multi-modal Information and Asymmetric Alignment},
   author  = {TODO},
   journal = {TODO},
   year    = {2026},
-  note    = {TODO: replace author list and public arXiv / IEEE TIP metadata}
+  note    = {TODO}
 }
 ```
 
