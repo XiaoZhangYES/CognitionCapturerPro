@@ -9,11 +9,10 @@
 </p>
 
 <p align="center">
-  <a href="https://arxiv.org/abs/2412.10489">
-    <img src="https://img.shields.io/badge/Paper-arXiv%20(TODO)-B31B1B.svg" alt="Paper arXiv TODO" />
+  <a href="https://arxiv.org/abs/2603.12722">
+    <img src="https://img.shields.io/badge/Paper-arXiv%202603.12722-B31B1B.svg" alt="Paper arXiv 2603.12722" />
+  </a>
 </p>
-
-> TODO: replace the temporary arXiv badge target and update the manuscript metadata after the paper is publicly available.
 
 <p align="center">
   <img src="assets/readme/figcogpro.png" alt="CogCapPro framework" width="100%" />
